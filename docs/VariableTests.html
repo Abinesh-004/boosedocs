@@ -7,14 +7,12 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class WriteCommand</div>
+    <div id="PageTitle">Class VariableTests</div>
     <div id="Contents" />
 
     
- The 'write' command prints text on the canvas at the current pen position.
- Example:
-     write "Hello"
-     write x   // prints the value of variable x
+ Contains unit tests related to variable handling
+ and expression evaluation in the BOOSE interpreter.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -29,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class WriteCommand : IBOOSECommand</pre></td></tr></tbody></table>
+    public class VariableTests</pre></td></tr></tbody></table>
     
     
     
@@ -43,11 +41,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor WriteCommand</div>
+    <div id="PageTitle">Method IntAssignment_StoresValue</div>
     <div id="Contents" />
 
     
- Creates a new write command.
+ Tests that an integer assignment command correctly
+ stores a value in the BOOSE context variable dictionary.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -62,7 +61,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public WriteCommand(string text)</pre></td></tr></tbody></table>
+    public void IntAssignment_StoresValue()</pre></td></tr></tbody></table>
     
     
     
@@ -76,11 +75,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method Expression_UsesVariableCorrectly</div>
     <div id="Contents" />
 
     
- Draws the text at the pen's current position using the current pen colour.
+ Tests that expressions using variables are evaluated
+ correctly when executing a command.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -95,7 +95,40 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
+    public void Expression_UsesVariableCorrectly()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method IntAssignment_Arithmetic</div>
+    <div id="Contents" />
+
+    
+ Tests arithmetic operations with variables.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void IntAssignment_Arithmetic()</pre></td></tr></tbody></table>
     
     
     

@@ -11,8 +11,8 @@
     <div id="Contents" />
 
     
- Represents the 'moveto' command.
- Updates the pen position without drawing anything.
+ Moves the pen to a new position without drawing.
+ Supports variables and expressions.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -41,11 +41,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Property X</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- New X position for the pen.
+ Expression used to calculate the X position.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public int X</pre></td></tr></tbody></table>
+    private readonly string _xExpression</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +74,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Property Y</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- New Y position for the pen.
+ Expression used to calculate the Y position.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +93,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public int Y</pre></td></tr></tbody></table>
+    private readonly string _yExpression</pre></td></tr></tbody></table>
     
     
     
@@ -111,7 +111,7 @@
     <div id="Contents" />
 
     
- Sets up a moveto command with the target coordinates.
+ Creates a moveto command using X and Y expressions.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,9 +126,20 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public MovetoCommand(int x, int y)</pre></td></tr></tbody></table>
+    public MovetoCommand(string xExpression, string yExpression)</pre></td></tr></tbody></table>
     
-    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>xExpression</div><div class='ParameterCommentContainer'>
+
+ Expression for the X position.
+ 
+</div>
+<div class='CommentParameterName'>yExpression</div><div class='ParameterCommentContainer'>
+
+ Expression for the Y position.
+ 
+</div>
+
     
     
     
@@ -144,8 +155,7 @@
     <div id="Contents" />
 
     
- Moves the pen to the given coordinates
- without creating any line on the canvas.
+ Evaluates the expressions and updates the pen position.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -162,7 +172,13 @@
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
     public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
     
-    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
+
+ Current BOOSE execution context.
+ 
+</div>
+
     
     
     

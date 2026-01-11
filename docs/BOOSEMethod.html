@@ -7,12 +7,13 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class DrawToCommand</div>
+    <div id="PageTitle">Class BOOSEMethod</div>
     <div id="Contents" />
 
     
- Command used to draw a line from the current pen position
- to a new position on the canvas.
+ Represents a user-defined method in the BOOSE language.
+ A method contains a name, a list of commands to execute,
+ and an optional list of parameters.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +28,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class DrawToCommand : IBOOSECommand</pre></td></tr></tbody></table>
+    public class BOOSEMethod</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +42,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field string</div>
+    <div id="PageTitle">Property Name</div>
     <div id="Contents" />
 
     
- Expression for the X coordinate (can include variables).
+ The name of the method.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +61,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private readonly string _xExpression</pre></td></tr></tbody></table>
+    public string Name</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +75,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field string</div>
+    <div id="PageTitle">Property Commands</div>
     <div id="Contents" />
 
     
- Expression for the Y coordinate (can include variables).
+ The list of commands that make up the method body.
+ These commands are executed when the method is called.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +95,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private readonly string _yExpression</pre></td></tr></tbody></table>
+    public List&lt;IBOOSECommand&gt; Commands</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +109,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor DrawToCommand</div>
+    <div id="PageTitle">Property Parameters</div>
     <div id="Contents" />
 
     
- Creates a new DrawTo command with X and Y expressions.
+ The list of parameter names used by the method.
+ Values are assigned to these parameters when the method is called.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,54 +129,50 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public DrawToCommand(string xExpression, string yExpression)</pre></td></tr></tbody></table>
+    public List&lt;string&gt; Parameters</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Constructor BOOSEMethod</div>
+    <div id="Contents" />
+
+    
+ Creates a new BOOSE method definition.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public BOOSEMethod(string name, List&lt;IBOOSECommand&gt; commands, List&lt;string&gt; parameters)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>xExpression</div><div class='ParameterCommentContainer'>
-Expression that evaluates to the X coordinate.
+<div class='CommentParameterName'>name</div><div class='ParameterCommentContainer'>
+The name of the method.
 </div>
-<div class='CommentParameterName'>yExpression</div><div class='ParameterCommentContainer'>
-Expression that evaluates to the Y coordinate.
+<div class='CommentParameterName'>commands</div><div class='ParameterCommentContainer'>
+The commands that form the method body.
 </div>
-
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
-    <div id="Contents" />
-
-    
- Executes the command by drawing a line and updating
- the pen position.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
-
- The BOOSE context containing graphics and pen state.
- 
+<div class='CommentParameterName'>parameters</div><div class='ParameterCommentContainer'>
+The list of parameter names.
 </div>
 
     

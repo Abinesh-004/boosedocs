@@ -7,12 +7,12 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class DrawToCommand</div>
+    <div id="PageTitle">Class LoopTests</div>
     <div id="Contents" />
 
     
- Command used to draw a line from the current pen position
- to a new position on the canvas.
+ Unit tests for loop and conditional commands in BOOSE.
+ This includes tests for for-loops, while-loops, and if-else statements.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class DrawToCommand : IBOOSECommand</pre></td></tr></tbody></table>
+    public class LoopTests</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +41,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field string</div>
+    <div id="PageTitle">Method ForLoop_ExecutesCorrectNumberOfTimes</div>
     <div id="Contents" />
 
     
- Expression for the X coordinate (can include variables).
+ Tests that a for-loop executes the correct number of times
+ and updates the pen's X position correctly.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +61,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private readonly string _xExpression</pre></td></tr></tbody></table>
+    public void ForLoop_ExecutesCorrectNumberOfTimes()</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +75,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field string</div>
+    <div id="PageTitle">Method ForLoop_WithStep</div>
     <div id="Contents" />
 
     
- Expression for the Y coordinate (can include variables).
+ Tests a for-loop that counts down using a negative step.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +94,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private readonly string _yExpression</pre></td></tr></tbody></table>
+    public void ForLoop_WithStep()</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +108,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor DrawToCommand</div>
+    <div id="PageTitle">Method WhileLoop_StopsAtCondition</div>
     <div id="Contents" />
 
     
- Creates a new DrawTo command with X and Y expressions.
+ Tests that a while-loop stops executing when the condition is false.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,16 +127,9 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public DrawToCommand(string xExpression, string yExpression)</pre></td></tr></tbody></table>
+    public void WhileLoop_StopsAtCondition()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>xExpression</div><div class='ParameterCommentContainer'>
-Expression that evaluates to the X coordinate.
-</div>
-<div class='CommentParameterName'>yExpression</div><div class='ParameterCommentContainer'>
-Expression that evaluates to the Y coordinate.
-</div>
-
+    
     
     
     
@@ -147,12 +141,11 @@ Expression that evaluates to the Y coordinate.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method IfElse_ExecutesTrueBranch</div>
     <div id="Contents" />
 
     
- Executes the command by drawing a line and updating
- the pen position.
+ Tests that an if-else executes the 'true' branch when the condition is true.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -167,15 +160,42 @@ Expression that evaluates to the Y coordinate.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
+    public void IfElse_ExecutesTrueBranch()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
+    
+    
+    
+    
+    
+    
+    
 
- The BOOSE context containing graphics and pen state.
- 
 </div>
 
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method IfElse_ExecutesFalseBranch</div>
+    <div id="Contents" />
+
+    
+ Tests that an if-else executes the 'false' branch when the condition is false.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void IfElse_ExecutesFalseBranch()</pre></td></tr></tbody></table>
+    
+    
     
     
     

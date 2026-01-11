@@ -7,12 +7,12 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Property class</div>
+    <div id="PageTitle">Class ForCommand</div>
     <div id="Contents" />
 
     
- The main window for the application.
- Handles the UI, easy menu options, and the drawing canvas.
+ Represents a BOOSE for-loop command that executes
+ a block of commands repeatedly.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public partial class Form1 : Form</pre></td></tr></tbody></table>
+    public class ForCommand : IBOOSECommand</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +41,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor Form1</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- Fires up the form, builds the menu, and gets the canvas ready.
+ Name of the loop control variable (e.g. "i").
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public Form1()</pre></td></tr></tbody></table>
+    private readonly string _variableName</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +74,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method AddMenu</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- Builds the top menu bar with File and Help options.
+ Expression defining the loop start value.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +93,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void AddMenu()</pre></td></tr></tbody></table>
+    private readonly string _startExpression</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +107,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method InitializeCanvas</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- Just a wrapper to start the canvas setup.
+ Expression defining the loop end value.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,7 +126,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void InitializeCanvas()</pre></td></tr></tbody></table>
+    private readonly string _endExpression</pre></td></tr></tbody></table>
     
     
     
@@ -140,11 +140,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CreateNewCanvas</div>
+    <div id="PageTitle">Field string</div>
     <div id="Contents" />
 
     
- Wipes the drawing surface clean and gets a fresh bitmap ready.
+ Optional expression defining the step value.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -159,7 +159,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void CreateNewCanvas()</pre></td></tr></tbody></table>
+    private readonly string _stepExpression</pre></td></tr></tbody></table>
     
     
     
@@ -173,11 +173,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method AppendOutput</div>
+    <div id="PageTitle">Field List</div>
     <div id="Contents" />
 
     
- Adds a line of text to the bottom log window and scrolls to it.
+ Commands executed during each loop iteration.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -192,11 +192,63 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void AppendOutput(string message)</pre></td></tr></tbody></table>
+    private readonly List&lt;IBOOSECommand&gt; _commands</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Constructor ForCommand</div>
+    <div id="Contents" />
+
+    
+ Initializes a new instance of the <a href="" >ForCommand</a> class.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public ForCommand(
+            string variableName,
+            string startExpression,
+            string endExpression,
+            string stepExpression,
+            List&lt;IBOOSECommand&gt; commands)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>message</div><div class='ParameterCommentContainer'>
-The text to show.
+<div class='CommentParameterName'>variableName</div><div class='ParameterCommentContainer'>
+Loop control variable name.
+</div>
+<div class='CommentParameterName'>startExpression</div><div class='ParameterCommentContainer'>
+Expression for the starting value.
+</div>
+<div class='CommentParameterName'>endExpression</div><div class='ParameterCommentContainer'>
+Expression for the ending value.
+</div>
+<div class='CommentParameterName'>stepExpression</div><div class='ParameterCommentContainer'>
+
+ Optional expression for the step value (defaults to 1).
+ 
+</div>
+<div class='CommentParameterName'>commands</div><div class='ParameterCommentContainer'>
+Commands executed inside the loop.
 </div>
 
     
@@ -210,11 +262,11 @@ The text to show.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method LoadDemoProgram</div>
+    <div id="PageTitle">Method Execute</div>
     <div id="Contents" />
 
     
- Puts some sample code into the editor so the user isn't staring at a blank screen.
+ Executes the for-loop using the provided BOOSE context.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -229,217 +281,14 @@ The text to show.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void LoadDemoProgram()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method SaveProgram</div>
-    <div id="Contents" />
-
-    
- Opens a dialog to save the current code to a text file.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void SaveProgram()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method LoadProgram</div>
-    <div id="Contents" />
-
-    
- Ask the user for a file and load it into the editor.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void LoadProgram()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ClearProgram</div>
-    <div id="Contents" />
-
-    
- Resets everything: clears code, clears output, and wipes the canvas.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void ClearProgram()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method BtnClear_Click</div>
-    <div id="Contents" />
-
-    
- Button click handler to wipe everything.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void BtnClear_Click(object sender, EventArgs e)</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method BtnRun_Click</div>
-    <div id="Contents" />
-
-    
- Runs the code currently in the editor box.
- Catches any errors and shows them in the log.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private void BtnRun_Click(object sender, EventArgs e)</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ParseProgram</div>
-    <div id="Contents" />
-
-    
- Reads the raw text and turns it into a list of commands we can actually run.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private List&lt;IBOOSECommand&gt; ParseProgram(string program)</pre></td></tr></tbody></table>
+    public void Execute(BOOSEContext context)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>program</div><div class='ParameterCommentContainer'>
-The full program text.
+<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
+The BOOSE execution context.
 </div>
 
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-A list of executable commands.
-</div>
-
+    
     
     
     
@@ -450,12 +299,11 @@ A list of executable commands.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ParseLines</div>
+    <div id="PageTitle">Method ExecuteLoopBody</div>
     <div id="Contents" />
 
     
- The main parsing loop. Goes through lines one by one.
- Can handle nested blocks recursively if needed.
+ Executes the loop body for a single iteration.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -470,24 +318,17 @@ A list of executable commands.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private List&lt;IBOOSECommand&gt; ParseLines(List&lt;string&gt; lines, ref int index, bool breakOnElse = false)</pre></td></tr></tbody></table>
+    private void ExecuteLoopBody(BOOSEContext context, int value)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>lines</div><div class='ParameterCommentContainer'>
-All the clean lines of code.
+<div class='CommentParameterName'>context</div><div class='ParameterCommentContainer'>
+The BOOSE execution context.
 </div>
-<div class='CommentParameterName'>index</div><div class='ParameterCommentContainer'>
-Current line number we're looking at.
-</div>
-<div class='CommentParameterName'>breakOnElse</div><div class='ParameterCommentContainer'>
-True if we should stop when we see an 'else' (for if blocks).
+<div class='CommentParameterName'>value</div><div class='ParameterCommentContainer'>
+Current value of the loop variable.
 </div>
 
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-List of parsed commands.
-</div>
-
+    
     
     
     

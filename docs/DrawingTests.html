@@ -11,8 +11,8 @@
     <div id="Contents" />
 
     
- Tests for basic drawing-related commands.
- Covers moveto, drawto, and a simple multiline sequence.
+ Unit tests for drawing commands in BOOSE.
+ Tests movement, pen colour, and drawing operations.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -41,11 +41,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Moveto_ChangesPenPosition</div>
+    <div id="PageTitle">Method Moveto_UpdatesPenPosition</div>
     <div id="Contents" />
 
     
- moveto should update the pen position to the given coordinates.
+ Test that MovetoCommand updates the pen's position correctly.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void Moveto_ChangesPenPosition()</pre></td></tr></tbody></table>
+    public void Moveto_UpdatesPenPosition()</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +74,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method DrawTo_ChangesPenPosition</div>
+    <div id="PageTitle">Method DrawTo_UpdatesPenPosition</div>
     <div id="Contents" />
 
     
- drawto should move the pen to the new location.
+ Test that DrawToCommand moves the pen to the target position.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +93,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void DrawTo_ChangesPenPosition()</pre></td></tr></tbody></table>
+    public void DrawTo_UpdatesPenPosition()</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +107,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method MultilineProgram_LeavesPenAtExpectedPosition</div>
+    <div id="PageTitle">Method Circle_DoesNotChangePenPosition</div>
     <div id="Contents" />
 
     
- Runs several commands in sequence and checks the final pen location.
+ Test that drawing a circle does not move the pen.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,7 +126,73 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public void MultilineProgram_LeavesPenAtExpectedPosition()</pre></td></tr></tbody></table>
+    public void Circle_DoesNotChangePenPosition()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method PenColour_UpdatesContextColour</div>
+    <div id="Contents" />
+
+    
+ Test that PenColourCommand sets the pen colour correctly using numbers.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void PenColour_UpdatesContextColour()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method PenColour_HandlesVariables</div>
+    <div id="Contents" />
+
+    
+ Test that PenColourCommand can handle variables as colour values.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\aarso\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void PenColour_HandlesVariables()</pre></td></tr></tbody></table>
     
     
     

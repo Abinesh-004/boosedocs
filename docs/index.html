@@ -1,78 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOSE Documentation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            padding: 8px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #0066cc;
-            font-size: 18px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section-title {
-            margin-top: 30px;
-            color: #444;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="container">
-    <h1>BOOSE Project Documentation</h1>
-    <p>Welcome to the automatically generated documentation for the BOOSE interpreter project.</p>
+    <div class="container">
+        <header>
+            <h1>BOOSE Project Documentation</h1>
+            <p class="subtitle">Complete API Reference and Developer Guide</p>
+        </header>
 
-    <h2 class="section-title">Core Classes</h2>
-    <ul>
-        <li><a href="BOOSEContext.html">BOOSEContext</a></li>
-        <li><a href="IBOOSE.html">IBOOSE</a></li>
-        <li><a href="BOOSEParser.html">BOOSEParser</a></li>
-        <li><a href="BOOSEParserException.html">BOOSEParserException</a></li>
-        <li><a href="Form1.html">Form1</a></li>
-        <li><a href="Form1.Designer.html">Form1 Designer</a></li>
-        <li><a href="Test.html">Test</a></li>
-    </ul>
+        <div class="grid">
+            <!-- Core Components -->
+            <div class="section-card">
+                <h2>Core Components</h2>
+                <ul>
+                    <li><a href="Program.html">Program</a></li>
+                    <li><a href="GlobalConfig.html">GlobalConfig</a></li>
+                    <li><a href="Form1.html">Form1</a></li>
+                    <li><a href="Form1.Designer.html">Form1 Designer</a></li>
+                    <li><a href="BOOSEContext.html">BOOSEContext</a></li>
+                    <li><a href="BOOSEMethod.html">BOOSEMethod</a></li>
+                    <li><a href="CommandFactory.html">CommandFactory</a></li>
+                </ul>
+            </div>
 
-    <h2 class="section-title">Commands</h2>
-    <ul>
-        <li><a href="MoveToCommand.html">MoveToCommand</a></li>
-        <li><a href="DrawToCommand.html">DrawToCommand</a></li>
-        <li><a href="CircleCommand.html">CircleCommand</a></li>
-        <li><a href="RectCommand.html">RectCommand</a></li>
-        <li><a href="PenColourCommand.html">PenColourCommand</a></li>
-        <li><a href="WriteCommand.html">WriteCommand</a></li>
-    </ul>
+            <!-- Commands -->
+            <div class="section-card">
+                <h2>Commands</h2>
+                <ul>
+                    <li><a href="CircleCommand.html">CircleCommand</a></li>
+                    <li><a href="RectCommand.html">RectCommand</a></li>
+                    <li><a href="DrawToCommand.html">DrawToCommand</a></li>
+                    <li><a href="MovetoCommand.html">MovetoCommand</a></li>
+                    <li><a href="PenColourCommand.html">PenColourCommand</a></li>
+                    <li><a href="WriteCommand.html">WriteCommand</a></li>
+                    <li><a href="ForCommand.html">ForCommand</a></li>
+                    <li><a href="IfCommand.html">IfCommand</a></li>
+                    <li><a href="PeekCommand.html">PeekCommand</a></li>
+                    <li><a href="PokeCommand.html">PokeCommand</a></li>
+                    <li><a href="IntAssignmentCommand.html">IntAssignmentCommand</a></li>
+                    <li><a href="RealAssignmentCommand.html">RealAssignmentCommand</a></li>
+                </ul>
+            </div>
 
-</div>
+            <!-- Evaluation & Parsing -->
+            <div class="section-card">
+                <h2>Evaluation & Parsing</h2>
+                <ul>
+                    <li><a href="DefaultExpressionEvaluator.html">DefaultExpressionEvaluator</a></li>
+                    <li><a href="BOOSEParseException.html">BOOSEParseException</a></li>
+                    <li><a href="BOOSEParserException.html">BOOSEParserException</a></li>
+                </ul>
+            </div>
+
+            <!-- Interfaces -->
+            <div class="section-card">
+                <h2>Interfaces</h2>
+                <ul>
+                    <li><a href="IBOOSECommand.html">IBOOSECommand</a></li>
+                    <li><a href="IExpressionEvaluator.html">IExpressionEvaluator</a></li>
+                </ul>
+            </div>
+
+            <!-- Tests -->
+            <div class="section-card">
+                <h2>Tests</h2>
+                <ul>
+                    <li><a href="ArrayTests.html">ArrayTests</a></li>
+                    <li><a href="DrawingTests.html">DrawingTests</a></li>
+                    <li><a href="LoopTests.html">LoopTests</a></li>
+                    <li><a href="MethodTests.html">MethodTests</a></li>
+                    <li><a href="RealTests.html">RealTests</a></li>
+                    <li><a href="VariableTests.html">VariableTests</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
